@@ -1,0 +1,18 @@
+.Note-Wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 600px;
+    flex-wrap: wrap;
+}
+.card .card-body {
+    min-width: 250px;
+    margin: 0;
+    background: #D6FAED;
+    box-shadow: 5px 10px 15px #FFD257;
+}
+.card {
+    margin-bottom: 15px;
+    border: 1px solid grey !important;
+}
