@@ -1,32 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Note from './components/Note'
+import './App.css';
+import { Route } from "react-router";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Notes from "./components/Notes";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      notes: []
-    };
-  }
-  componentDidMount() {
-    fetch('')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        this.setState({ notess: data.results });
-      })
-      .catch(err => {
-        throw new Error(err);
-      });
-  }
-  render() {
+class App extends Component {  
+render() {
     return (
       <div className="App">
         <h1 className="Header">Lovely Notes</h1>
-        <Note {...this.state} />
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/notes" component={Notes} />
       </div>
     );
   }
